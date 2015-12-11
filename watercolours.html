@@ -1,0 +1,38 @@
+---
+layout: default
+title: Watercolours
+---
+
+<div id="sidebar2"><div class="border">
+  <div class="title">
+    WATERCOLOURS
+  </div>
+
+  <div class="section">
+    Having started to learn the techniques of watercolour painting she was
+    nonplussed in discovering her interpretation of the scenery she was
+    painting.
+  </div>
+
+  <div class="section">
+    With hindsight she realised that her translation conveyed a
+    deep, vibrant and somehow serene reproduction.  Perhaps it is
+    a projection of a deep yearning.
+  </div>
+
+  <div class="section">
+    She leaves you to be the judge.
+  </div>
+</div></div>
+
+<div id="content"><div class="border">
+  {% for painting in site.watercolours %}
+    <div class="image-preview">
+      <div class="thumbnail"><a href="{{painting.url}}"><img src="art/{{painting.thumbnail}}" /></a></div>
+      <div class="title">{{painting.title}}</div>
+      <div class="text">{{painting.teaser}}</div>
+    </div>
+    {% endfor %}
+</div></div>
+
+<div style="clear:both"></div>

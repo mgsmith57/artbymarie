@@ -1,0 +1,40 @@
+---
+layout: default
+title: Oils
+---
+
+<div id="sidebar2"><div class="border">
+  <div class="title">
+    OIL PAINTINGS
+  </div>
+  <div class="section">
+    As for her oil painting, like the rest, it all started with a chance remark.
+  </div>
+
+  <div class="section">
+    Her son Marc was so enthused by the artist Mark Rothko's work, she decided
+    to try and reproduce a painting for him.
+  </div>
+
+  <div class="section">
+    She decided against taking oil painting lessons to learn the basics of the
+    medium, and instead plunged ahead, prepared to ruin a couple of canvases in
+    the process.
+  </div>
+
+  <div class="section">
+    That was never the case.
+  </div>
+</div></div>
+
+<div id="content"><div class="border">
+  {% for painting in site.oils %}
+    <div class="image-preview">
+      <div class="thumbnail"><a href="{{painting.url}}"><img src="art/{{painting.thumbnail}}" /></a></div>
+      <div class="title">{{painting.title}}</div>
+      <div class="text">{{painting.teaser}}</div>
+    </div>
+  {% endfor %}
+</div></div>
+
+<div style="clear:both"></div>

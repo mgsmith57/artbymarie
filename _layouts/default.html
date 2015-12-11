@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% include head.html %}
+    <title>{{page.title}} | Art By Marie</title>
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+</head>
 
-  <body>
+<body>
+<a name="top"></a>
+<div id="container">
 
-    {% include header.html %}
+  <div id="header"><div class="border">
+    <div class="title"><b>ART BY</b> MARIE</div>
+    <div class="tagline">Her Complete Works &copy; 2006</div>
+  </div></div>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  <div id="nav"><div class="border">
+    <ul
+    ><li id="link-about"><a href="{{ site.baseurl }}/">About The Artist</a></li
+    ><li id="link-commission"><a href="{{ site.baseurl }}/contact.html">Commission A Work</a></li
+    ><li id="link-watercolours"><a href="{{ site.baseurl }}/watercolours.html">Watercolours</a></li
+    ><li id="link-oils"><a href="{{ site.baseurl }}/oils.html">Oil Paintings</a></li
+    ></ul>
+  </div></div>
+
+  <div id="subheader"><div class="border">
+    <div class="title">{{page.title}}{{painting.title}}</div>
+  </div></div>
+
+  <div id="columns"  style="clear:both;">
+    <div id="sidebar1"><div class="border">
+    </div></div>
+
+    {{ content }}
+
+  </div>
+
+  <div id="footer"><div class="border">
+    <div id="copyright">
     </div>
+  </div></div>
 
-    {% include footer.html %}
+  <div id="subfooter"><div class="border">
+    <div id="bridge-text">
+      Web Design and Development by<br/>
+      <a href="http://www.big-llc.com">Bridge Interactive Group</a>
+      -
+      <!-- Start of StatCounter Code -->
+      <script type="text/javascript" language="javascript">
+        var sc_project=1701952;
+        var sc_invisible=0;
+        var sc_partition=16;
+        var sc_security="5b0f4bd6";
+        var sc_text=2;
+      </script>
+      <a style="text-decoration:none" href="http://my.statcounter.com/project/standard/stats.php?project_id=1701952&amp;guest=1">
+        <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+      </a>
+      <noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c17.statcounter.com/counter.php?sc_project=1701952&amp;java=0&amp;security=5b0f4bd6&amp;invisible=0" alt="free hit counter code" border="0"></a> </noscript>
 
-  </body>
+    </div>
+  </div></div>
 
+</div>
+</body>
 </html>
+

@@ -3,51 +3,117 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+body {
+  text-align: expression("center");
+}
+#container {
+  width: 790px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  position: relative;
+}
+#header {
+}
+#subheader {
+}
+#sidebar1 {
+  width: 124px;
+  float:left;
+  overflow: hidden;
+}
+#sidebar2 {
+  width: 124px;
+  float:right;
+}
+#content {
+  margin-left: 124px;
+  margin-right: 124px;
+}
+#sidebar1, #sidebar2
+{
+  padding-bottom: 3270px;
+  margin-bottom: -3270px;
+}
+#columns
+{
+  overflow: hidden;
+  xdisplay:  inline-block;
+}
+* html #wrapper
+{
+  float: left;
+}
+#footer {
+  clear: both;
 }
 
 
+/* layout tweeks */
+body { margin-top: 0px; margin-bottom: 10px;}
+#container { width: 750px; margin-top: 0px; margin-bottom: 0px;}
+#columns { width: 750px; }
+#sidebar1 {	display: none;}
+#sidebar2 {	width: 224px;}
+#content { width: 500px; margin-right: 0px; margin-left: 0px;}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+
+/* styling */
+body { font-family: Arial, Helvetica, sans-serif; font-size: 14px;}
+body { background: #623D60 url(../images/body-bk.gif);}
+img {	display: block;}
+
+#header { background: white; padding: 15px; }
+#header .title { font-weight: bold; font-size: 4em;}
+#header .title b { color: #623D60;}
+#header .tagline { font-weight: bold; font-size: 1em; color: #623D60;}
+
+#subheader { background: url(../images/corner-top2.gif); height: 44px;}
+#subheader .title {line-height: 10px; padding-top: 17px; padding-left: 510px; color: #623D60; padding-bottom: 20px; font-size: 1.2em; font-weight: bold; text-transform: uppercase;}
+
+#footer { clear:both; background: url(../images/corner-bottom.gif) bottom no-repeat; height: 12px; }
+#columns { background: white; }
+
+#nav {  position: absolute; top: 73px; left: 215px; font-size: 0.8em; }
+#nav a { display: block; width: 100px; color: #666; text-decoration: none; padding: 8px 0px; border: blue 0px solid;}
+#nav a:hover { width: 100px; color: white; background: #666; text-decoration: none; }
+#nav ul {	margin:  0px; padding: 0px;}
+#nav li {	text-align: center; width: 100px; display: inline;  padding: 0px; border: red 0px solid;}
+#nav #link-about { position: absolute; top: 0px; left: 0px; }
+#nav #link-commission { position: absolute; top: 0px; left: 100px; }
+#nav #link-watercolours { position: absolute; top: -50px; left: 290px;  width: 75px; height: 150px; background: url(../images/watercolours.jpg) top no-repeat}
+#nav #link-watercolours a { margin-top:  50px; width: 75px; }
+#nav #link-oils { position: absolute; top: -50px; left: 390px;  width: 75px; height: 150px; background: url(../images/oils.jpg) top no-repeat}
+#nav #link-oils a { margin-top:  50px; width: 75px; }
+
+#sidebar2  {padding-top: 10px; padding-right: 15px;}
+#sidebar2 .section {padding-bottom: 20px; font-size: 0.9em;}
+#sidebar2 .title {display:none; color: #623D60; padding-bottom: 20px; font-size: 1.2em; font-weight: bold; }
+#sidebar2 { width: 220px;}
+
+#content .border { padding: 15px; padding-left: 25px;}
+
+#content .image-preview { float: left; height: 100px; width: 220px; font-size: 0.8em; padding: 12px 10px 8px 0px; padding-left: 0px;}
+#content .image-preview { border-bottom: 0px solid #666;}
+#content .image-preview .thumbnail { float:left; margin-right: 8px; height: 100px; width: 100px; padding: auto;}
+#content .image-preview .thumbnail img { border: 0px;}
+#content .image-preview .title { font-weight: bold; font-size: 1.1em; color: #623D60; }
+
+
+#content #commission-form { padding: 0px 30px; border: #666 solid 1px; background: #ccc; width: 380px;}
+#content #commission-form textarea { font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+#content #commission-form input { font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+#content #commission-form select { font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+#content #commission-form label { font-size: 0.8em; display: block; padding-top: 5px; text-weight: bold; }
+#content #commission-form .button { width: 100px;}
+#content #commission-form #name { width: 380px; }
+#content #commission-form #email {width: 380px; }
+#content #commission-form #message {width: 380px; }
+#content #commission-form #submit {}
+
+#content .section {padding-top: 20px; font-size: 0.9em;}
+
+#subfooter { margin-top: 10px; background: url(../images/bridge-bk.gif) top right no-repeat; height: 44px;}
+#subfooter #bridge-text { color: #623D60; font-size: 0.8em; margin-left: 572px; padding-top: 6px;}
+#subfooter #bridge-text a { color: #623D60; display: inline; padding-top: 4px;}
